@@ -9,7 +9,9 @@ OBJ_DIR		=	obj/
 INC_DIR		=	include/
 
 # source files
-SRCS = megaphone.cpp
+SRCS =	src/main.cpp \
+		src/Contact.cpp \
+		src/PhoneBook.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 .PHONY: all

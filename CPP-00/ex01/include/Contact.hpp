@@ -3,6 +3,8 @@
 
 // 필요 헤더 파일 정의
 #include <string>
+#include <iostream>
+#include <iomanip> // setw, right 사용
 
 // contact 클래스
 /*
@@ -30,7 +32,10 @@ class Contact{
 	}
 	*/
 	public:
-		Contact(void);
-		~Contact(void);
-}
+		Contact();
+		~Contact();
+		bool AddContact();
+		void PrintContact();
+		void PrintData();
+};
 #endif

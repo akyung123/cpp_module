@@ -35,7 +35,7 @@ class Contact{
 		Contact();
 		~Contact();
 		bool AddContact();
-		void PrintContact();
-		void PrintData();
+		void PrintContact() const;
+		void PrintData() const;
 };
 #endif

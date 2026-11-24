@@ -1,25 +1,24 @@
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
+#include <sstream>
 
-// 생성자 정의
-PhoneBook::PhoneBook() {
+PhoneBook::PhoneBook() : count(0), nextIndex(0) {
 }
 
-// 소멸자 정의
 PhoneBook::~PhoneBook() {
 }
 
-void PhoneBook::PrintAll() {
-    std::cout << std::left << std::setw(10) << "Index" << "|";
-    std::cout << std::left << std::setw(10) << "First name" << "|";
-    std::cout << std::left << std::setw(10) << "Last name" << "|";
-    std::cout << std::left << std::setw(10) << "Nickname" << "|";
-    std::cout << std::endl;
+void PhoneBook::PrintAll() const {
+    std::cout << std::right << std::setw(10) << "Index" << "|";
+    std::cout << std::setw(10) << "First name" << "|";
+    std::cout << std::setw(10) << "Last name" << "|";
+    std::cout << std::setw(10) << "Nickname" << std::endl;
 
-    for (int i = 0; i < std::min(count, 8); i++)
+    for (int i = 0; i < count; ++i)
     {
-        std::cout << std::right << std::setw(1) << i << "|";
+        std::cout << std::right << std::setw(10) << i << "|";
         contacts[i].PrintContact();
+        std::cout << std::endl;
     }
 }
 
@@ -36,9 +35,16 @@ void PhoneBook::AddContact() {
 }
 
 void PhoneBook::SearchContact() {
-    if (x >= 0 && x < std::min(count, 8))
-        contacts[x].PrintData();
-    else
+    PrintAll();
+    std::cout << "Enter index: ";
+    std::string input;
+    if (!std::getline(std::cin, input))
+        return ;
+    if (input.length() != 1 || input[0] < '0' || input[0] > '7' || input[0] - '0' >= count)
+    {
         std::cout << "Invalid index." << std::endl;
+        return ;
+    }
+    int x = input[0] - '0';
+    contacts[x].PrintData();
 }
-

@@ -1,6 +1,5 @@
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
-#include <sstream>
 
 PhoneBook::PhoneBook() : count(0), nextIndex(0) {
 }

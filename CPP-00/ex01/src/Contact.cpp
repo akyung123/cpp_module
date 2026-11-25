@@ -2,7 +2,6 @@
 
 namespace
 {
-    // 반복은 보조 함수로 뺌
     bool ReadNonEmptyField(const std::string &prompt, std::string &value)
     {
         while (true)
@@ -23,16 +22,7 @@ namespace
     }
 }
 
-Contact::Contact() {
-}
 
-// 소멸자 정의
-Contact::~Contact() {
-}
-
-// cin과 getline은?
-// 공백 기준인지, 줄라인 기준인지 읽기 차이
-// cin은 공백, 탭, 줄바꿈 기준, getline은 줄바꿈 기준
 bool Contact::AddContact() {
     if (!ReadNonEmptyField("First name: ", f_name))
         return false;

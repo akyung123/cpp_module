@@ -1,20 +1,4 @@
-// 입력된 문자를 모두 대문자로 변경해서 출력한다
-// 최대한 C++답게 만들도록 노력할 것
-
-/*
-	인자가 없을 경우 
-		: * LOUD AND UNBEARABLE FEEDBACK NOISE * 출력
-	인자가 두 개 이상일 경우
-		: 인자로 들어온 문자열을 이어서 출력
-	인자가 한 개일 경우
-		: 모든 알파벳을 대문자로 전환해서 출력
-*/
-// toupper 함수 이용함
-
 #include <iostream>
-#include <cctype>
-#include <string>
-#include <algorithm>
 
 void toupper_line(char *line)
 {

@@ -8,11 +8,6 @@ SRCS = 	src/main.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
-# debug 넣을까?
-ifdef debug
-	CPPFLAGS += -g -fsanitize-address
-endif
-
 .PHONY : all
 all: $(NAME)
 
@@ -34,5 +29,5 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-,PHONY: re
+.PHONY: re
 re: fclean all

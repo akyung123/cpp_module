@@ -1,6 +1,9 @@
 #include "Zombie.hpp"
 
-int maine() {
+int main() {
 	Zombie *Zombies = ZombieHorde(10, "z");
-	delete Zombies;
+	for (int i = 0; i < 10; i++)
+		Zombies[i].announce();
+	delete[] Zombies;
+	return 0;
 }

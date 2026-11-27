@@ -8,13 +8,11 @@ class Zombie {
         std::string name;
     
     public:
-        void announce();
-
-        void SetName(const std::string &InputName);
-
         ~Zombie();
+        void announce();
+        void SetName(const std::string &InputName);
 };
 
-Zombie *zombieHorde(int N, std::string name);
+Zombie *ZombieHorde(int N, std::string name);
 
 #endif

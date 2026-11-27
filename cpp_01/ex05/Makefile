@@ -1,12 +1,10 @@
-NAME = Harl 2.0
+NAME = Harl
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 INCLUDE = -I./include
 
 SRCS = 	src/main.cpp \
-		src/Zombie.cpp \
-		src/newZombie.cpp \
-		src/randomChump.cpp
+		src/Harl.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 

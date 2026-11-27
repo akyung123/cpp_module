@@ -8,11 +8,8 @@ class HumanA {
         Weapon &_Weapon;
         std::string _name;
     public:
-        // 생성자
         HumanA(std::string TypeName, Weapon &TypeWeapon);
-        
         // void setWeapon(Weapon &Type);
-
         void attack();
 };
 
